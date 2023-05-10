@@ -148,9 +148,9 @@
             // 
             // TeacherLogin
             // 
-            this.TeacherLogin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TeacherLogin.BackColor = System.Drawing.Color.Black;
             this.TeacherLogin.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeacherLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TeacherLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TeacherLogin.Location = new System.Drawing.Point(123, 346);
             this.TeacherLogin.Name = "TeacherLogin";
             this.TeacherLogin.Size = new System.Drawing.Size(106, 41);
@@ -172,9 +172,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(121, 346);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 41);
@@ -262,6 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1070, 740);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Login";
