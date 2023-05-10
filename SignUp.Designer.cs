@@ -127,27 +127,36 @@
             // 
             // textBox3
             // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.DimGray;
             this.textBox3.Location = new System.Drawing.Point(289, 345);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(480, 44);
             this.textBox3.TabIndex = 10;
+            this.textBox3.Text = "abc123@example.com";
             // 
             // LName
             // 
+            this.LName.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LName.ForeColor = System.Drawing.Color.DimGray;
             this.LName.Location = new System.Drawing.Point(555, 246);
             this.LName.Multiline = true;
             this.LName.Name = "LName";
             this.LName.Size = new System.Drawing.Size(214, 44);
             this.LName.TabIndex = 9;
+            this.LName.Text = "Last Name";
             // 
             // FName
             // 
+            this.FName.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FName.ForeColor = System.Drawing.Color.DimGray;
             this.FName.Location = new System.Drawing.Point(289, 246);
             this.FName.Multiline = true;
             this.FName.Name = "FName";
             this.FName.Size = new System.Drawing.Size(214, 44);
             this.FName.TabIndex = 8;
+            this.FName.Text = "First Name";
             // 
             // ConfirmPassword
             // 
@@ -232,7 +241,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1070, 792);
+            this.ClientSize = new System.Drawing.Size(1070, 740);
             this.Controls.Add(this.panel1);
             this.Name = "SignUp";
             this.Text = "TeacherSignup";
