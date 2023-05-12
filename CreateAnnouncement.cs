@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DB_Lab_Project
 {
-    public partial class Dashboard : Form
+    public partial class CreateAnnouncement : Form
     {
-        public Dashboard()
+        public CreateAnnouncement()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

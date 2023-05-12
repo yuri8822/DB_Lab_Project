@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DB_Lab_Project
 {
-    public partial class Dashboard : Form
+    public partial class JoinClass : Form
     {
-        public Dashboard()
+        public JoinClass()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
