@@ -46,16 +46,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CreateAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CreateAnnouncement.Designer.cs">
+      <DependentUpon>CreateAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateClass.Designer.cs">
+      <DependentUpon>CreateClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateMaterial.Designer.cs">
+      <DependentUpon>CreateMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JoinClass.Designer.cs">
+      <DependentUpon>JoinClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CreateAnnouncement.resx">
+      <DependentUpon>CreateAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateClass.resx">
+      <DependentUpon>CreateClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateMaterial.resx">
+      <DependentUpon>CreateMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinClass.resx">
+      <DependentUpon>JoinClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +117,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
