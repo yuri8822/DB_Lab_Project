@@ -1,0 +1,4 @@
+
+CREATE DATABASE DB_L_Project;
+
+USE DB_L_Project;
