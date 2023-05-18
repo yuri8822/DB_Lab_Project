@@ -16,7 +16,7 @@ namespace DB_Lab_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreateMaterial());
+            Application.Run(new Login());
         }
     }
 }
