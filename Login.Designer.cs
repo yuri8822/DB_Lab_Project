@@ -42,7 +42,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.StudentPassword = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.StudentLogin = new System.Windows.Forms.Button();
             this.Student = new System.Windows.Forms.Label();
             this.StudentEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -81,7 +81,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(359, 481);
             this.panel2.TabIndex = 0;
@@ -106,7 +106,7 @@
             this.panel3.Controls.Add(this.TeacherLogin);
             this.panel3.Controls.Add(this.Teacher);
             this.panel3.Location = new System.Drawing.Point(27, 110);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(297, 299);
             this.panel3.TabIndex = 7;
@@ -128,7 +128,7 @@
             this.TeacherEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeacherEmail.ForeColor = System.Drawing.SystemColors.GrayText;
             this.TeacherEmail.Location = new System.Drawing.Point(42, 123);
-            this.TeacherEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TeacherEmail.Margin = new System.Windows.Forms.Padding(2);
             this.TeacherEmail.Multiline = true;
             this.TeacherEmail.Name = "TeacherEmail";
             this.TeacherEmail.Size = new System.Drawing.Size(205, 24);
@@ -140,7 +140,7 @@
             this.TeacherPassword.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeacherPassword.ForeColor = System.Drawing.SystemColors.GrayText;
             this.TeacherPassword.Location = new System.Drawing.Point(42, 176);
-            this.TeacherPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TeacherPassword.Margin = new System.Windows.Forms.Padding(2);
             this.TeacherPassword.Multiline = true;
             this.TeacherPassword.Name = "TeacherPassword";
             this.TeacherPassword.Size = new System.Drawing.Size(206, 25);
@@ -164,7 +164,7 @@
             this.TeacherLogin.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeacherLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TeacherLogin.Location = new System.Drawing.Point(120, 227);
-            this.TeacherLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TeacherLogin.Margin = new System.Windows.Forms.Padding(2);
             this.TeacherLogin.Name = "TeacherLogin";
             this.TeacherLogin.Size = new System.Drawing.Size(71, 27);
             this.TeacherLogin.TabIndex = 6;
@@ -189,7 +189,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 477);
             this.panel1.TabIndex = 0;
@@ -198,12 +198,12 @@
             // 
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.StudentPassword);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.StudentLogin);
             this.panel4.Controls.Add(this.Student);
             this.panel4.Controls.Add(this.StudentEmail);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(24, 108);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(297, 299);
             this.panel4.TabIndex = 13;
@@ -224,25 +224,26 @@
             this.StudentPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentPassword.ForeColor = System.Drawing.SystemColors.GrayText;
             this.StudentPassword.Location = new System.Drawing.Point(42, 176);
-            this.StudentPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StudentPassword.Margin = new System.Windows.Forms.Padding(2);
             this.StudentPassword.Multiline = true;
             this.StudentPassword.Name = "StudentPassword";
             this.StudentPassword.Size = new System.Drawing.Size(223, 25);
             this.StudentPassword.TabIndex = 11;
             this.StudentPassword.Text = "Enter Password";
             // 
-            // button1
+            // StudentLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(120, 227);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 27);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
+            this.StudentLogin.BackColor = System.Drawing.Color.Black;
+            this.StudentLogin.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.StudentLogin.Location = new System.Drawing.Point(120, 227);
+            this.StudentLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.StudentLogin.Name = "StudentLogin";
+            this.StudentLogin.Size = new System.Drawing.Size(71, 27);
+            this.StudentLogin.TabIndex = 12;
+            this.StudentLogin.Text = "Login";
+            this.StudentLogin.UseVisualStyleBackColor = false;
+            this.StudentLogin.Click += new System.EventHandler(this.StudentLogin_Click);
             // 
             // Student
             // 
@@ -261,7 +262,7 @@
             this.StudentEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentEmail.ForeColor = System.Drawing.SystemColors.GrayText;
             this.StudentEmail.Location = new System.Drawing.Point(42, 123);
-            this.StudentEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StudentEmail.Margin = new System.Windows.Forms.Padding(2);
             this.StudentEmail.Multiline = true;
             this.StudentEmail.Name = "StudentEmail";
             this.StudentEmail.Size = new System.Drawing.Size(223, 24);
@@ -286,7 +287,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(713, 481);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Login";
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -321,7 +322,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox StudentPassword;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button StudentLogin;
         private System.Windows.Forms.Label Student;
         private System.Windows.Forms.TextBox StudentEmail;
         private System.Windows.Forms.Label label4;
