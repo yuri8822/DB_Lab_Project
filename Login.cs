@@ -44,7 +44,7 @@ namespace DB_Lab_Project
             conn.Close();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void StudentLogin_Load(object sender, EventArgs e)
         {
 
         }
