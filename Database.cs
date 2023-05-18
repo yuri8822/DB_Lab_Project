@@ -9,16 +9,22 @@ namespace DB_Lab_Project
 {
     public class Database
     {
-        private string connString;
+        private string UmarString;
+        private string ARString;
 
         public Database()
         {
-            connString = @"Data Source = UMARFAROOQ\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
+            UmarString = @"Data Source = UMARFAROOQ\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
+            //ARString = 
         }
 
-        public string ConnectionString()
+        public string getUmarString()
         {            
-            return connString;
+            return UmarString;
+        }
+        public string getARString()
+        {
+            return ARString;
         }
     }
 }

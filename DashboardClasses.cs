@@ -17,6 +17,7 @@ namespace DB_Lab_Project
         public DashboardClasses()
         {
             InitializeComponent();
+            Database db = new Database();
         }
 
         public TeacherDashboardClasses TeacherDashboardClasses
@@ -29,7 +30,7 @@ namespace DB_Lab_Project
 
         public String myConnection()
         {
-            String con = "Data Source=DESKTOP-L3PILNC\\SQLEXPRESS;Initial Catalog=DB_L_Project;Integrated Security=True"; ;
+            String con = @"Data Source = UMARFAROOQ\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
             return con;
         }
         

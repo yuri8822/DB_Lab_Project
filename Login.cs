@@ -54,8 +54,8 @@ namespace DB_Lab_Project
             reader.Read();
             if (reader.HasRows)
             {
-                Dashboard dashboard = new Dashboard();
-                dashboard.Show();
+                StudentDashboard stdDashboard = new StudentDashboard();
+                stdDashboard.Show();
             }
             reader.Close();
             conn.Close();
