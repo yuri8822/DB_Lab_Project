@@ -30,7 +30,7 @@ namespace DB_Lab_Project
         private void TeacherLogin_Click(object sender, EventArgs e)
         {
             conn.Open();
-            cmd = new SqlCommand("SELECT * from USER_R WHERE Email = @Email", conn);
+            cmd = new SqlCommand("SELECT * from USER_R WHERE Email = @Email AND UserType = 'Teacher'", conn);
             cmd.Parameters.AddWithValue("@Email", TeacherEmail.Text);
             reader = cmd.ExecuteReader();
 
@@ -44,7 +44,7 @@ namespace DB_Lab_Project
             conn.Close();
         }
 
-        private void StudentLogin_Load(object sender, EventArgs e)
+        private void StudentLogin_Click(object sender, EventArgs e)
         {
 
         }
