@@ -21,5 +21,10 @@ namespace DB_Lab_Project
         {
 
         }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
