@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.GoogleClassroom = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Announcement = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.PostBtn = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Announcement = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.GoogleClassroom = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,33 +50,17 @@
             this.panel1.Size = new System.Drawing.Size(1071, 739);
             this.panel1.TabIndex = 0;
             // 
-            // GoogleClassroom
+            // PostBtn
             // 
-            this.GoogleClassroom.AutoSize = true;
-            this.GoogleClassroom.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F);
-            this.GoogleClassroom.Location = new System.Drawing.Point(74, 36);
-            this.GoogleClassroom.Name = "GoogleClassroom";
-            this.GoogleClassroom.Size = new System.Drawing.Size(215, 31);
-            this.GoogleClassroom.TabIndex = 9;
-            this.GoogleClassroom.Text = "Google Classroom";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(80, 80);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(897, 2);
-            this.panel2.TabIndex = 11;
-            // 
-            // Announcement
-            // 
-            this.Announcement.AutoSize = true;
-            this.Announcement.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Announcement.Location = new System.Drawing.Point(74, 120);
-            this.Announcement.Name = "Announcement";
-            this.Announcement.Size = new System.Drawing.Size(315, 36);
-            this.Announcement.TabIndex = 12;
-            this.Announcement.Text = "Create Announcement";
+            this.PostBtn.BackColor = System.Drawing.Color.Black;
+            this.PostBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PostBtn.ForeColor = System.Drawing.Color.White;
+            this.PostBtn.Location = new System.Drawing.Point(874, 618);
+            this.PostBtn.Name = "PostBtn";
+            this.PostBtn.Size = new System.Drawing.Size(103, 40);
+            this.PostBtn.TabIndex = 14;
+            this.PostBtn.Text = "Post";
+            this.PostBtn.UseVisualStyleBackColor = false;
             // 
             // richTextBox1
             // 
@@ -89,17 +73,33 @@
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "Enter announcement...";
             // 
-            // PostBtn
+            // Announcement
             // 
-            this.PostBtn.BackColor = System.Drawing.Color.Black;
-            this.PostBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PostBtn.ForeColor = System.Drawing.Color.White;
-            this.PostBtn.Location = new System.Drawing.Point(874, 618);
-            this.PostBtn.Name = "PostBtn";
-            this.PostBtn.Size = new System.Drawing.Size(103, 40);
-            this.PostBtn.TabIndex = 14;
-            this.PostBtn.Text = "Post";
-            this.PostBtn.UseVisualStyleBackColor = false;
+            this.Announcement.AutoSize = true;
+            this.Announcement.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Announcement.Location = new System.Drawing.Point(74, 120);
+            this.Announcement.Name = "Announcement";
+            this.Announcement.Size = new System.Drawing.Size(315, 36);
+            this.Announcement.TabIndex = 12;
+            this.Announcement.Text = "Create Announcement";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(80, 80);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(897, 2);
+            this.panel2.TabIndex = 11;
+            // 
+            // GoogleClassroom
+            // 
+            this.GoogleClassroom.AutoSize = true;
+            this.GoogleClassroom.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F);
+            this.GoogleClassroom.Location = new System.Drawing.Point(74, 36);
+            this.GoogleClassroom.Name = "GoogleClassroom";
+            this.GoogleClassroom.Size = new System.Drawing.Size(215, 31);
+            this.GoogleClassroom.TabIndex = 9;
+            this.GoogleClassroom.Text = "Google Classroom";
             // 
             // CreateAnnouncement
             // 
