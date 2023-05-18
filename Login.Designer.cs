@@ -275,7 +275,6 @@
             this.signUpBtn.TabIndex = 7;
             this.signUpBtn.Text = "Sign-Up";
             this.signUpBtn.UseVisualStyleBackColor = false;
-            this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
             // 
             // label6
             // 
@@ -296,7 +295,6 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();

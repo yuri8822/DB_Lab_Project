@@ -48,11 +48,5 @@ namespace DB_Lab_Project
         {
 
         }
-
-        private void signUpBtn_Click(object sender, EventArgs e)
-        {
-            SignUp signUp = new SignUp();
-            signUp.Show();
-        }
     }
 }
