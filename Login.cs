@@ -46,7 +46,19 @@ namespace DB_Lab_Project
 
         private void StudentLogin_Click(object sender, EventArgs e)
         {
+            conn.Open();
+            cmd = new SqlCommand("SELECT * from USER_R WHERE Email = @Email AND UserType = 'Student'", conn);
+            cmd.Parameters.AddWithValue("@Email", TeacherEmail.Text);
+            reader = cmd.ExecuteReader();
 
+            reader.Read();
+            if (reader.HasRows)
+            {
+                StudentDashboard stdDashboard = new StudentDashboard();
+                stdDashboard.Show();
+            }
+            reader.Close();
+            conn.Close();
         }
     }
 }

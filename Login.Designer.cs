@@ -30,6 +30,8 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.signUpBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,12 +44,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.StudentPassword = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.StudentLogin = new System.Windows.Forms.Button();
             this.Student = new System.Windows.Forms.Label();
             this.StudentEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.signUpBtn = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -86,6 +86,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(538, 740);
             this.panel2.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(36, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(193, 21);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Don\'t have an Account?";
+            // 
+            // signUpBtn
+            // 
+            this.signUpBtn.BackColor = System.Drawing.Color.Black;
+            this.signUpBtn.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.signUpBtn.Location = new System.Drawing.Point(235, 103);
+            this.signUpBtn.Name = "signUpBtn";
+            this.signUpBtn.Size = new System.Drawing.Size(106, 42);
+            this.signUpBtn.TabIndex = 7;
+            this.signUpBtn.Text = "Sign-Up";
+            this.signUpBtn.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -190,7 +212,7 @@
             // 
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.StudentPassword);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.StudentLogin);
             this.panel4.Controls.Add(this.Student);
             this.panel4.Controls.Add(this.StudentEmail);
             this.panel4.Controls.Add(this.label4);
@@ -220,17 +242,18 @@
             this.StudentPassword.TabIndex = 11;
             this.StudentPassword.Text = "Enter Password";
             // 
-            // button1
+            // StudentLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(180, 349);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 42);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
+            this.StudentLogin.BackColor = System.Drawing.Color.Black;
+            this.StudentLogin.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.StudentLogin.Location = new System.Drawing.Point(180, 349);
+            this.StudentLogin.Name = "StudentLogin";
+            this.StudentLogin.Size = new System.Drawing.Size(106, 42);
+            this.StudentLogin.TabIndex = 12;
+            this.StudentLogin.Text = "Login";
+            this.StudentLogin.UseVisualStyleBackColor = false;
+            this.StudentLogin.Click += new System.EventHandler(this.StudentLogin_Click);
             // 
             // Student
             // 
@@ -263,28 +286,6 @@
             this.label4.Size = new System.Drawing.Size(122, 31);
             this.label4.TabIndex = 9;
             this.label4.Text = "Password";
-            // 
-            // signUpBtn
-            // 
-            this.signUpBtn.BackColor = System.Drawing.Color.Black;
-            this.signUpBtn.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.signUpBtn.Location = new System.Drawing.Point(235, 103);
-            this.signUpBtn.Name = "signUpBtn";
-            this.signUpBtn.Size = new System.Drawing.Size(106, 42);
-            this.signUpBtn.TabIndex = 7;
-            this.signUpBtn.Text = "Sign-Up";
-            this.signUpBtn.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 113);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 21);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Don\'t have an Account?";
             // 
             // Login
             // 
@@ -327,7 +328,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox StudentPassword;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button StudentLogin;
         private System.Windows.Forms.Label Student;
         private System.Windows.Forms.TextBox StudentEmail;
         private System.Windows.Forms.Label label4;
