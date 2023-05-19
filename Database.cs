@@ -9,7 +9,6 @@ namespace DB_Lab_Project
 {
     public class Database
     {
-
         public string getUmarString()
         {            
             return @"Data Source = UMARFAROOQ\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
