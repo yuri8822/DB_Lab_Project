@@ -16,7 +16,7 @@ namespace DB_Lab_Project
         }
         public string getARString()
         {
-            return "";
+            return " ";
         }
     }
 }
