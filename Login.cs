@@ -24,7 +24,7 @@ namespace DB_Lab_Project
 
             db = new Database();
 
-            conn = new SqlConnection(db.ConnectionString());
+            conn = new SqlConnection(db.getARString());
         }
 
         private void TeacherLogin_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace DB_Lab_Project
         {
             conn.Open();
             cmd = new SqlCommand("SELECT * from USER_R WHERE Email = @Email AND UserType = 'Student'", conn);
-            cmd.Parameters.AddWithValue("@Email", TeacherEmail.Text);
+            cmd.Parameters.AddWithValue("@Email", StudentEmail.Text);
             reader = cmd.ExecuteReader();
 
             reader.Read();
@@ -59,6 +59,12 @@ namespace DB_Lab_Project
             }
             reader.Close();
             conn.Close();
+        }
+
+        private void SignUpBtn_Click(object sender, EventArgs e)
+        {
+            SignUp signup = new SignUp();
+            signup.Show();
         }
     }
 }

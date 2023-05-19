@@ -13,39 +13,53 @@ namespace DB_Lab_Project
 {
     public partial class Announcements_Tab : UserControl
     {
+        Database db = new Database();
         public Announcements_Tab()
         {
             InitializeComponent();
         }
-        public Announcement announcement { 
-            get 
+        public Announcement announcement
+        {
+            get
             {
                 return (Announcement)AnnouncementCB.SelectedItem;
             }
         }
 
-        public String myConnection()
-        {
-            String conn = "Data Source=DESKTOP-L3PILNC\\SQLEXPRESS;Initial Catalog=DB_L_Project;Integrated Security=True";
-            return conn;
-        }
+
 
         private void Announcement_Tab_Load(object sender, EventArgs e)
         {
             List<Announcement> announcements = new List<Announcement>();
-            //nnouncementCB.Items.Clear();
-            SqlConnection conn = new SqlConnection(myConnection());
+            AnnouncementCB.Items.Clear();
+            SqlConnection conn = new SqlConnection(db.getARString());
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Post", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Announcement", conn);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                announcements.Add(new Announcement(reader["AnnouncementTitle"].ToString(), reader["AnnouncementDescription"].ToString()));
+                announcements.Add(new Announcement(reader["announce_Title"].ToString(), reader["announce_Desc"].ToString(), reader["announce_Time"].ToString()));
             }
-            AnnouncementCB.DataSource = announcements;
-            AnnouncementCB.ValueMember = "AnnouncementDescription";
-            AnnouncementCB.DisplayMember = "AnnouncementTitle";
+            reader.Close();
             conn.Close();
+            AnnouncementCB.DisplayMember = "Title";
+            AnnouncementCB.DataSource = announcements;
+            
         }
-    }
+
+        private void ViewBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+    }    
 }

@@ -13,20 +13,29 @@ namespace DB_Lab_Project
         public string announcementDescription;
         public string announcementDate;
         public string announcementClassCode;
-
-        public Announcement(int announcementID, string announcementTitle, string announcementDescription, string announcementDate, string announcementClassCode)
+        
+        public Announcement()
         {
-            this.announcementID = announcementID;
+
+        }
+
+        public Announcement(string announcementTitle, string announcementDescription, string announcementDate)
+        {
+            //this.announcementID = announcementID;
             this.announcementTitle = announcementTitle;
             this.announcementDescription = announcementDescription;
             this.announcementDate = announcementDate;
-            this.announcementClassCode = announcementClassCode;
         }
         
         public Announcement(String Title, String Desciption)
         {
             this.announcementTitle = Title;
             this.announcementDescription = Desciption;
+        }
+        
+        public Announcement(String Title)
+        {
+            this.announcementTitle = Title; 
         }
 
         public int AnnouncementID
@@ -59,6 +68,10 @@ namespace DB_Lab_Project
             set { announcementClassCode = value; }
         }
 
-        
+        public override string ToString()
+        {
+            return announcementTitle;
+        }
+
     }
 }

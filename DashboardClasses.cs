@@ -35,9 +35,9 @@ namespace DB_Lab_Project
         private void DashboardClasses_Load(object sender, EventArgs e)
         {
             List<TeacherDashboardClasses> teacherDashboardClasses = new List<TeacherDashboardClasses>();
-            SqlConnection conn = new SqlConnection(db.getARString()); // ITS OVER HERE! remember to define your string in the Database.cs class!
-            conn.Open();
+            SqlConnection conn = new SqlConnection(db.getARString()); 
             SqlCommand cmd = new SqlCommand("SELECT * FROM Class", conn);
+            conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {

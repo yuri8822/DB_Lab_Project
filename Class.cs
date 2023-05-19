@@ -16,5 +16,10 @@ namespace DB_Lab_Project
         {
             InitializeComponent();
         }
+
+        private void TeacherClass_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

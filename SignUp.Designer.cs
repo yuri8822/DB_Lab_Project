@@ -33,8 +33,8 @@
             this.Student = new System.Windows.Forms.RadioButton();
             this.Teacher = new System.Windows.Forms.RadioButton();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PasswordTxt = new System.Windows.Forms.TextBox();
+            this.EmailTxt = new System.Windows.Forms.TextBox();
             this.LName = new System.Windows.Forms.TextBox();
             this.FName = new System.Windows.Forms.TextBox();
             this.ConfirmPassword = new System.Windows.Forms.Label();
@@ -55,8 +55,8 @@
             this.panel1.Controls.Add(this.Student);
             this.panel1.Controls.Add(this.Teacher);
             this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.PasswordTxt);
+            this.panel1.Controls.Add(this.EmailTxt);
             this.panel1.Controls.Add(this.LName);
             this.panel1.Controls.Add(this.FName);
             this.panel1.Controls.Add(this.ConfirmPassword);
@@ -84,6 +84,7 @@
             this.Sign_Up.TabIndex = 15;
             this.Sign_Up.Text = "Sign Up";
             this.Sign_Up.UseVisualStyleBackColor = false;
+            this.Sign_Up.Click += new System.EventHandler(this.Sign_Up_Click);
             // 
             // Student
             // 
@@ -117,24 +118,24 @@
             this.textBox5.Size = new System.Drawing.Size(480, 44);
             this.textBox5.TabIndex = 12;
             // 
-            // textBox4
+            // PasswordTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(289, 434);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(480, 44);
-            this.textBox4.TabIndex = 11;
+            this.PasswordTxt.Location = new System.Drawing.Point(289, 434);
+            this.PasswordTxt.Multiline = true;
+            this.PasswordTxt.Name = "PasswordTxt";
+            this.PasswordTxt.Size = new System.Drawing.Size(480, 44);
+            this.PasswordTxt.TabIndex = 11;
             // 
-            // textBox3
+            // EmailTxt
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox3.Location = new System.Drawing.Point(289, 345);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(480, 44);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "abc123@example.com";
+            this.EmailTxt.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTxt.ForeColor = System.Drawing.Color.DimGray;
+            this.EmailTxt.Location = new System.Drawing.Point(289, 345);
+            this.EmailTxt.Multiline = true;
+            this.EmailTxt.Name = "EmailTxt";
+            this.EmailTxt.Size = new System.Drawing.Size(480, 44);
+            this.EmailTxt.TabIndex = 10;
+            this.EmailTxt.Text = "abc123@example.com";
             // 
             // LName
             // 
@@ -262,8 +263,8 @@
         private System.Windows.Forms.RadioButton Student;
         private System.Windows.Forms.RadioButton Teacher;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PasswordTxt;
+        private System.Windows.Forms.TextBox EmailTxt;
         private System.Windows.Forms.TextBox LName;
         private System.Windows.Forms.TextBox FName;
         private System.Windows.Forms.Label ConfirmPassword;

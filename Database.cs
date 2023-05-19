@@ -15,7 +15,7 @@ namespace DB_Lab_Project
         public Database()
         {
             UmarString = @"Data Source = UMARFAROOQ\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
-            //ARString = 
+            ARString = @"Data Source = DESKTOP-L3PILNC\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
         }
 
         public string getUmarString()
