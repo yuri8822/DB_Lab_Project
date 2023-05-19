@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace DB_Lab_Project
 {
-    public partial class JoinClass : Form
+    public partial class Form1 : Form
     {
-        public JoinClass()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Join_Click(object sender, EventArgs e)
-        {
-            // Over here we need to check if the user entered code is present within the "allSemesterClasses"
-            // table in our Database.
         }
     }
 }

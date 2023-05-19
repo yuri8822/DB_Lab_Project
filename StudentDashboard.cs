@@ -16,5 +16,11 @@ namespace DB_Lab_Project
         {
             InitializeComponent();
         }
+
+        private void ClassBtn_Click(object sender, EventArgs e)
+        {
+            JoinClass joinClass = new JoinClass();
+            joinClass.Show();
+        }
     }
 }

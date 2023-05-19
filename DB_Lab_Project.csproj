@@ -107,6 +107,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_L_ProjectDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="JoinClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,12 @@
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherDashboardClasses.cs" />
+    <Compile Include="ClassPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClassPanel.Designer.cs">
+      <DependentUpon>ClassPanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Announcements Tab.resx">
       <DependentUpon>Announcements Tab.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +173,9 @@
     <EmbeddedResource Include="DashboardClasses.resx">
       <DependentUpon>DashboardClasses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JoinClass.resx">
       <DependentUpon>JoinClass.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassPanel.resx">
+      <DependentUpon>ClassPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DB_L_ProjectDataSet.xsc">
       <DependentUpon>DB_L_ProjectDataSet.xsd</DependentUpon>
