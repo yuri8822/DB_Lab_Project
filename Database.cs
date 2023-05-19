@@ -12,7 +12,7 @@ namespace DB_Lab_Project
 
         public string getUmarString()
         {            
-            return @"Data Source = UMARFAROOQ\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True"; ;
+            return @"Data Source = UMARFAROOQ\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
         }
         public string getARString()
         {
