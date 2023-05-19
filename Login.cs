@@ -24,7 +24,7 @@ namespace DB_Lab_Project
 
             db = new Database();
 
-            conn = new SqlConnection(db.getARString());
+            conn = new SqlConnection(db.getUmarString());
         }
 
         private void TeacherLogin_Click(object sender, EventArgs e)
