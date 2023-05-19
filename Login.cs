@@ -47,8 +47,9 @@ namespace DB_Lab_Project
         private void StudentLogin_Click(object sender, EventArgs e)
         {
             conn.Open();
-            cmd = new SqlCommand("SELECT * from USER_R WHERE Email = @Email AND UserType = 'Student'", conn);
-            cmd.Parameters.AddWithValue("@Email", StudentEmail.Text);
+            cmd = new SqlCommand("SELECT * from USER_R WHERE Email = @Email AND Pass = @Pass AND UserType = 'Student'", conn);
+            cmd.Parameters.AddWithValue("@Email", TeacherEmail.Text);
+            cmd.Parameters.AddWithValue("@Pass", StudentPassword.Text);
             reader = cmd.ExecuteReader();
 
             reader.Read();
