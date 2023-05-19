@@ -62,5 +62,11 @@ namespace DB_Lab_Project
             reader.Close();
             conn.Close();
         }
+
+        private void SignUpBtn_Click(object sender, EventArgs e)
+        {
+            SignUp signup = new SignUp();
+            signup.Show();
+        }
     }
 }
