@@ -35,7 +35,7 @@ namespace DB_Lab_Project
         private void DashboardClasses_Load(object sender, EventArgs e)
         {
             List<TeacherDashboardClasses> teacherDashboardClasses = new List<TeacherDashboardClasses>();
-            SqlConnection conn = new SqlConnection(db.getARString()); 
+            SqlConnection conn = new SqlConnection(db.getUmarString()); 
             SqlCommand cmd = new SqlCommand("SELECT * FROM Class", conn);
             conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
