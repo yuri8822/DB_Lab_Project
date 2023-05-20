@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialTab1 = new DB_Lab_Project.MaterialTab();
+            this.MaterialBox = new DB_Lab_Project.MaterialTab();
             this.assignmentsTab1 = new DB_Lab_Project.AssignmentsTab();
             this.announcements_Tab1 = new DB_Lab_Project.Announcements_Tab();
             this.CreateBtn = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.materialTab1);
+            this.panel1.Controls.Add(this.MaterialBox);
             this.panel1.Controls.Add(this.assignmentsTab1);
             this.panel1.Controls.Add(this.announcements_Tab1);
             this.panel1.Controls.Add(this.CreateBtn);
@@ -54,12 +54,12 @@
             this.panel1.Size = new System.Drawing.Size(1069, 742);
             this.panel1.TabIndex = 0;
             // 
-            // materialTab1
+            // MaterialBox
             // 
-            this.materialTab1.Location = new System.Drawing.Point(80, 522);
-            this.materialTab1.Name = "materialTab1";
-            this.materialTab1.Size = new System.Drawing.Size(897, 166);
-            this.materialTab1.TabIndex = 18;
+            this.MaterialBox.Location = new System.Drawing.Point(80, 522);
+            this.MaterialBox.Name = "MaterialBox";
+            this.MaterialBox.Size = new System.Drawing.Size(897, 166);
+            this.MaterialBox.TabIndex = 18;
             // 
             // assignmentsTab1
             // 
@@ -142,6 +142,6 @@
         private System.Windows.Forms.Button CreateBtn;
         private AssignmentsTab assignmentsTab1;
         private Announcements_Tab announcements_Tab1;
-        private MaterialTab materialTab1;
+        private MaterialTab MaterialBox;
     }
 }

@@ -31,7 +31,7 @@ namespace DB_Lab_Project
         private void MaterialLoad(object sender, EventArgs e)
         {
             List<Material> material = new List<Material>();
-            SqlConnection conn = new SqlConnection(db.getUmarString());
+            SqlConnection conn = new SqlConnection(db.getARString());
             SqlCommand cmd = new SqlCommand("SELECT * FROM Material", conn);
             conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -42,6 +42,32 @@ namespace DB_Lab_Project
             MaterialCB.DisplayMember = "MT_Title";
             MaterialCB.DataSource = material;
             conn.Close();
+        }
+
+        private void ViewBtn_Click(object sender, EventArgs e)
+        {
+            ViewMaterial material = new ViewMaterial();
+            material.MaterialCBText = MaterialCB.Text;
+            material.Show();
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            UpdateMaterial update = new UpdateMaterial();
+            update.MaterialCBText = MaterialCB.Text;
+            update.Show();
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(db.getARString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("DELETE FROM Material WHERE MT_Title = @title", conn);
+            cmd.Parameters.AddWithValue("@title", MaterialCB.Text);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Material Deleted Successfully");
+            MaterialLoad(sender, e);
         }
     }
 }

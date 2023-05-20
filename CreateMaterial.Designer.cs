@@ -35,13 +35,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.GoogleClassroom = new System.Windows.Forms.Label();
             this.Material = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.TitleTextBox);
             this.panel1.Controls.Add(this.PostBtn);
             this.panel1.Controls.Add(this.uploadBtn);
             this.panel1.Controls.Add(this.richTextBox1);
@@ -63,6 +64,7 @@
             this.PostBtn.TabIndex = 16;
             this.PostBtn.Text = "Post";
             this.PostBtn.UseVisualStyleBackColor = false;
+            this.PostBtn.Click += new System.EventHandler(this.PostBtn_Click);
             // 
             // uploadBtn
             // 
@@ -112,13 +114,18 @@
             this.Material.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Material.Location = new System.Drawing.Point(74, 120);
             this.Material.Name = "Material";
-            this.Material.Size = new System.Drawing.Size(293, 36);
+            this.Material.Size = new System.Drawing.Size(71, 36);
             this.Material.TabIndex = 13;
-            this.Material.Text = "Create Class Material";
+            this.Material.Text = "Title";
             // 
-            // openFileDialog1
+            // TitleTextBox
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.TitleTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleTextBox.Location = new System.Drawing.Point(154, 120);
+            this.TitleTextBox.Multiline = true;
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.Size = new System.Drawing.Size(227, 36);
+            this.TitleTextBox.TabIndex = 17;
             // 
             // CreateMaterial
             // 
@@ -144,7 +151,7 @@
         private System.Windows.Forms.Label Material;
         private System.Windows.Forms.Button uploadBtn;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button PostBtn;
+        private System.Windows.Forms.TextBox TitleTextBox;
     }
 }

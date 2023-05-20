@@ -31,8 +31,8 @@ namespace DB_Lab_Project
         {
             
             List<Assignment> assignments = new List<Assignment>();
-            AssignmentCB.Items.Clear();
-            SqlConnection conn = new SqlConnection(db.getUmarString());
+            //AssignmentCB.Items.Clear();
+            SqlConnection conn = new SqlConnection(db.getARString());
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Assignment", conn);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -49,13 +49,28 @@ namespace DB_Lab_Project
 
         private void ViewBtn_Click(object sender, EventArgs e)
         {
-            ViewAnnouncement announcement = new ViewAnnouncement();
-            announcement.Show();
+            ViewAssignment assignment = new ViewAssignment();
+            assignment.AssignmentCBText = AssignmentCB.Text;
+            assignment.Show();
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            
+            UpdateAssignment update = new UpdateAssignment();
+            update.AssignmentCBText = AssignmentCB.Text;
+            update.Show();
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(db.getARString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("DELETE FROM Assignment WHERE ass_Title = @title", conn);
+            cmd.Parameters.AddWithValue("@title", AssignmentCB.Text);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Announcement Deleted Successfully");
+            AssignmentLoad(sender, e);
         }
     }
 }

@@ -27,7 +27,8 @@ namespace DB_Lab_Project
             }
             else if (comboBox1.SelectedIndex == 1)
             {
-
+                CreateMaterial material = new CreateMaterial();
+                material.ShowDialog();
             }
             else if (comboBox1.SelectedIndex == 2)
             {

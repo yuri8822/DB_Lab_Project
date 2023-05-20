@@ -35,12 +35,12 @@
             this.ViewBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Material
+            // MaterialLabel
             // 
             this.MaterialLabel.AutoSize = true;
             this.MaterialLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaterialLabel.Location = new System.Drawing.Point(34, 58);
-            this.MaterialLabel.Name = "Material";
+            this.MaterialLabel.Name = "MaterialLabel";
             this.MaterialLabel.Size = new System.Drawing.Size(107, 31);
             this.MaterialLabel.TabIndex = 2;
             this.MaterialLabel.Text = "Material";
@@ -64,6 +64,7 @@
             this.DeleteBtn.TabIndex = 22;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // UpdateBtn
             // 
@@ -76,6 +77,7 @@
             this.UpdateBtn.TabIndex = 21;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // ViewBtn
             // 
@@ -88,6 +90,7 @@
             this.ViewBtn.TabIndex = 20;
             this.ViewBtn.Text = "View";
             this.ViewBtn.UseVisualStyleBackColor = false;
+            this.ViewBtn.Click += new System.EventHandler(this.ViewBtn_Click);
             // 
             // MaterialTab
             // 

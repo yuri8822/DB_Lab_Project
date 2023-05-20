@@ -7,14 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DB_Lab_Project
 {
     public partial class ViewAssignment : Form
     {
+        private Database db;
         public ViewAssignment()
         {
             InitializeComponent();
+            db = new Database();
+        }
+        
+        public string AssignmentCBText { get; set; }
+
+        private void ViewAssignment_Load(object sender, EventArgs e)
+        {
+            string title = AssignmentCBText;
+            ViewAssignmentLabel.Text = title;
+            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Assignment WHERE ass_Title = @title", conn);
+            cmd.Parameters.AddWithValue("@title", AssignmentCBText);
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string description = reader["ass_Desc"].ToString();
+                string marks = reader["ass_Marks"].ToString();
+                richTextBox1.Text = description;
+                Marks.Text = marks + " points";
+            }
+            conn.Close();
         }
     }
 }

@@ -97,6 +97,18 @@
     <Compile Include="UpdateAnnouncement.Designer.cs">
       <DependentUpon>UpdateAnnouncement.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAssignment.Designer.cs">
+      <DependentUpon>UpdateAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMaterial.Designer.cs">
+      <DependentUpon>UpdateMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,12 @@
     <Compile Include="ViewAssignment.Designer.cs">
       <DependentUpon>ViewAssignment.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMaterial.Designer.cs">
+      <DependentUpon>ViewMaterial.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Announcements Tab.resx">
       <DependentUpon>Announcements Tab.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +204,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateAnnouncement.resx">
       <DependentUpon>UpdateAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAssignment.resx">
+      <DependentUpon>UpdateAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMaterial.resx">
+      <DependentUpon>UpdateMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAnnouncement.resx">
       <DependentUpon>ViewAnnouncement.cs</DependentUpon>
@@ -228,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAssignment.resx">
       <DependentUpon>ViewAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMaterial.resx">
+      <DependentUpon>ViewMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DB_L_ProjectDataSet.xsc">
       <DependentUpon>DB_L_ProjectDataSet.xsd</DependentUpon>
