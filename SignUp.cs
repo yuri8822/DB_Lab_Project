@@ -38,10 +38,10 @@ namespace DB_Lab_Project
         private void Sign_Up_Click(object sender, EventArgs e)
         {
             conn.Open();
-            cmd = new SqlCommand("INSERT INTO USER_R (Name, Email, UserType) VALUES (@Name, @Email, @UserType)", conn);
+            cmd = new SqlCommand("INSERT INTO USER_R (Name, Email, UserType, Pass) VALUES (@Name, @Email, @UserType, @Password)", conn);
             cmd.Parameters.AddWithValue("@Name", FName.Text + " " + LName.Text);
             cmd.Parameters.AddWithValue("@Email", EmailTxt.Text);
-            //cmd.Parameters.AddWithValue("@Password", PasswordTxt.Text);
+            cmd.Parameters.AddWithValue("@Password", PasswordTxt.Text);
             if (Student.Checked == true)
             {
                 cmd.Parameters.AddWithValue("@UserType", "Student");
@@ -53,9 +53,7 @@ namespace DB_Lab_Project
             cmd.ExecuteNonQuery();
             MessageBox.Show("Account Created Successfully");
             Login login = new Login();
-            login.Show();
-            
-            
+            login.Show();            
 
             conn.Close();
         }
