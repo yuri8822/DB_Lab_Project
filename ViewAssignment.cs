@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DB_Lab_Project
 {
-    public partial class AssignmentPortal : Form
+    public partial class ViewAssignment : Form
     {
-        public AssignmentPortal()
+        public ViewAssignment()
         {
             InitializeComponent();
         }

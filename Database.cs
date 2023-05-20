@@ -15,7 +15,7 @@ namespace DB_Lab_Project
         }
         public string getARString()
         {
-            return " ";
+            return @"Data Source = DESKTOP-L3PILNC\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
         }
     }
 }

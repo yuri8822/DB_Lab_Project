@@ -54,11 +54,11 @@
       <DependentUpon>Announcements Tab.cs</DependentUpon>
     </Compile>
     <Compile Include="Assignment.cs" />
-    <Compile Include="AssignmentPortal.cs">
+    <Compile Include="CreateAssignment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AssignmentPortal.Designer.cs">
-      <DependentUpon>AssignmentPortal.cs</DependentUpon>
+    <Compile Include="CreateAssignment.Designer.cs">
+      <DependentUpon>CreateAssignment.cs</DependentUpon>
     </Compile>
     <Compile Include="AssignmentsTab.cs">
       <SubType>UserControl</SubType>
@@ -78,6 +78,12 @@
     <Compile Include="Create.Designer.cs">
       <DependentUpon>Create.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAnnouncement.Designer.cs">
+      <DependentUpon>CreateAnnouncement.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashboardClasses.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,11 +91,17 @@
       <DependentUpon>DashboardClasses.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
-    <Compile Include="CreateAnnouncement.cs">
+    <Compile Include="UpdateAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateAnnouncement.Designer.cs">
-      <DependentUpon>CreateAnnouncement.cs</DependentUpon>
+    <Compile Include="UpdateAnnouncement.Designer.cs">
+      <DependentUpon>UpdateAnnouncement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAnnouncement.Designer.cs">
+      <DependentUpon>ViewAnnouncement.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateClass.cs">
       <SubType>Form</SubType>
@@ -148,11 +160,17 @@
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherDashboardClasses.cs" />
+    <Compile Include="ViewAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAssignment.Designer.cs">
+      <DependentUpon>ViewAssignment.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Announcements Tab.resx">
       <DependentUpon>Announcements Tab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssignmentPortal.resx">
-      <DependentUpon>AssignmentPortal.cs</DependentUpon>
+    <EmbeddedResource Include="CreateAssignment.resx">
+      <DependentUpon>CreateAssignment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AssignmentsTab.resx">
       <DependentUpon>AssignmentsTab.cs</DependentUpon>
@@ -165,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAnnouncement.resx">
       <DependentUpon>CreateAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAnnouncement.resx">
+      <DependentUpon>UpdateAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAnnouncement.resx">
+      <DependentUpon>ViewAnnouncement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateClass.resx">
       <DependentUpon>CreateClass.cs</DependentUpon>
@@ -201,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAssignment.resx">
+      <DependentUpon>ViewAssignment.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DB_L_ProjectDataSet.xsc">
       <DependentUpon>DB_L_ProjectDataSet.xsd</DependentUpon>

@@ -34,7 +34,7 @@
             this.ClassBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GoogleClassroom = new System.Windows.Forms.Label();
-            this.dashboardClasses1 = new DB_Lab_Project.DashboardClasses();
+            this.dashboardClasses2 = new DB_Lab_Project.DashboardClasses();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +50,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1071, 742);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Class
             // 
@@ -66,7 +65,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.dashboardClasses1);
+            this.panel3.Controls.Add(this.dashboardClasses2);
             this.panel3.Controls.Add(this.ClassBtn);
             this.panel3.Location = new System.Drawing.Point(80, 200);
             this.panel3.Name = "panel3";
@@ -104,12 +103,12 @@
             this.GoogleClassroom.TabIndex = 2;
             this.GoogleClassroom.Text = "Google Classroom";
             // 
-            // dashboardClasses1
+            // dashboardClasses2
             // 
-            this.dashboardClasses1.Location = new System.Drawing.Point(26, 122);
-            this.dashboardClasses1.Name = "dashboardClasses1";
-            this.dashboardClasses1.Size = new System.Drawing.Size(846, 166);
-            this.dashboardClasses1.TabIndex = 1;
+            this.dashboardClasses2.Location = new System.Drawing.Point(26, 101);
+            this.dashboardClasses2.Name = "dashboardClasses2";
+            this.dashboardClasses2.Size = new System.Drawing.Size(846, 166);
+            this.dashboardClasses2.TabIndex = 1;
             // 
             // Dashboard
             // 
@@ -119,7 +118,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -136,5 +134,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Class;
         private DashboardClasses dashboardClasses1;
+        private DashboardClasses dashboardClasses2;
     }
 }

@@ -20,6 +20,8 @@ namespace DB_Lab_Project
         {
             InitializeComponent();
             db = new Database();
+            CreateAssignment assignment = new CreateAssignment();
+            assignment.ClassesCBText = ClassesCB.Text;
         }
 
         public TeacherDashboardClasses TeacherDashboardClasses
@@ -35,7 +37,7 @@ namespace DB_Lab_Project
         private void DashboardClasses_Load(object sender, EventArgs e)
         {
             List<TeacherDashboardClasses> teacherDashboardClasses = new List<TeacherDashboardClasses>();
-            SqlConnection conn = new SqlConnection(db.getUmarString()); // ITS OVER HERE! remember to define your string in the Database.cs class!
+            SqlConnection conn = new SqlConnection(db.getARString()); // ITS OVER HERE! remember to define your string in the Database.cs class!
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM CLASS", conn);
             SqlDataReader reader = cmd.ExecuteReader();

@@ -26,12 +26,13 @@ namespace DB_Lab_Project
             }
         }
 
+       
 
 
         private void Announcement_Tab_Load(object sender, EventArgs e)
         {
             List<Announcement> announcements = new List<Announcement>();
-            AnnouncementCB.Items.Clear();
+            //AnnouncementCB.Items.Clear();
             SqlConnection conn = new SqlConnection(db.getARString());
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Announcement", conn);
@@ -47,18 +48,31 @@ namespace DB_Lab_Project
             
         }
 
+
         private void ViewBtn_Click(object sender, EventArgs e)
         {
-
+            ViewAnnouncement announcement = new ViewAnnouncement();
+            announcement.AnnouncementCBText = AnnouncementCB.Text;
+            announcement.ShowDialog();
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-
+            UpdateAnnouncement announcement = new UpdateAnnouncement();
+            announcement.AnnouncementCBText = AnnouncementCB.Text;
+            announcement.ShowDialog();
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection(db.getARString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("DELETE FROM Announcement WHERE announce_Title = @title", conn);
+            cmd.Parameters.AddWithValue("@title", AnnouncementCB.Text);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Announcement Deleted Successfully");
+            Announcement_Tab_Load(sender, e);
 
         }
     }    

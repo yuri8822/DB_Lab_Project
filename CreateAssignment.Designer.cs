@@ -1,6 +1,6 @@
 ﻿namespace DB_Lab_Project
 {
-    partial class AssignmentPortal
+    partial class CreateAssignment
     {
         /// <summary>
         /// Required designer variable.
@@ -29,22 +29,27 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
+            this.MarksTxtBox = new System.Windows.Forms.TextBox();
             this.Marks = new System.Windows.Forms.Label();
             this.PostBtn = new System.Windows.Forms.Button();
             this.uploadBtn = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GoogleClassroom = new System.Windows.Forms.Label();
-            this.GradedAssignment = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Title = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.SetDeadline = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.SetDeadline);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.TitleTextBox);
+            this.panel1.Controls.Add(this.MarksTxtBox);
             this.panel1.Controls.Add(this.Marks);
             this.panel1.Controls.Add(this.PostBtn);
             this.panel1.Controls.Add(this.uploadBtn);
@@ -56,14 +61,23 @@
             this.panel1.Size = new System.Drawing.Size(1072, 740);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // TitleTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(932, 516);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(53, 34);
-            this.textBox1.TabIndex = 19;
+            this.TitleTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleTextBox.Location = new System.Drawing.Point(164, 119);
+            this.TitleTextBox.Multiline = true;
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.Size = new System.Drawing.Size(315, 35);
+            this.TitleTextBox.TabIndex = 20;
+            // 
+            // MarksTxtBox
+            // 
+            this.MarksTxtBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MarksTxtBox.Location = new System.Drawing.Point(932, 516);
+            this.MarksTxtBox.Multiline = true;
+            this.MarksTxtBox.Name = "MarksTxtBox";
+            this.MarksTxtBox.Size = new System.Drawing.Size(53, 34);
+            this.MarksTxtBox.TabIndex = 19;
             // 
             // Marks
             // 
@@ -86,6 +100,7 @@
             this.PostBtn.TabIndex = 17;
             this.PostBtn.Text = "Post";
             this.PostBtn.UseVisualStyleBackColor = false;
+            this.PostBtn.Click += new System.EventHandler(this.PostBtn_Click);
             // 
             // uploadBtn
             // 
@@ -108,7 +123,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(897, 297);
             this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "Enter announcement...";
+            this.richTextBox1.Text = "Enter Instructions...";
             // 
             // panel2
             // 
@@ -128,30 +143,44 @@
             this.GoogleClassroom.TabIndex = 11;
             this.GoogleClassroom.Text = "Google Classroom";
             // 
-            // GradedAssignment
+            // Title
             // 
-            this.GradedAssignment.AutoSize = true;
-            this.GradedAssignment.BackColor = System.Drawing.Color.White;
-            this.GradedAssignment.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GradedAssignment.Location = new System.Drawing.Point(74, 120);
-            this.GradedAssignment.Name = "GradedAssignment";
-            this.GradedAssignment.Size = new System.Drawing.Size(172, 36);
-            this.GradedAssignment.TabIndex = 14;
-            this.GradedAssignment.Text = "Assignment";
+            this.Title.AutoSize = true;
+            this.Title.BackColor = System.Drawing.Color.White;
+            this.Title.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(74, 120);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(71, 36);
+            this.Title.TabIndex = 14;
+            this.Title.Text = "Title";
             // 
-            // openFileDialog1
+            // dateTimePicker1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.dateTimePicker1.Location = new System.Drawing.Point(785, 155);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 21;
             // 
-            // AssignmentPortal
+            // SetDeadline
+            // 
+            this.SetDeadline.AutoSize = true;
+            this.SetDeadline.BackColor = System.Drawing.Color.White;
+            this.SetDeadline.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SetDeadline.Location = new System.Drawing.Point(586, 145);
+            this.SetDeadline.Name = "SetDeadline";
+            this.SetDeadline.Size = new System.Drawing.Size(182, 36);
+            this.SetDeadline.TabIndex = 22;
+            this.SetDeadline.Text = "Set Deadline";
+            // 
+            // CreateAssignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1070, 740);
-            this.Controls.Add(this.GradedAssignment);
+            this.Controls.Add(this.Title);
             this.Controls.Add(this.panel1);
-            this.Name = "AssignmentPortal";
+            this.Name = "CreateAssignment";
             this.Text = "AssignmentPortal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -165,12 +194,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label GoogleClassroom;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label GradedAssignment;
+        private System.Windows.Forms.Label Title;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button uploadBtn;
         private System.Windows.Forms.Button PostBtn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox MarksTxtBox;
         private System.Windows.Forms.Label Marks;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox TitleTextBox;
+        private System.Windows.Forms.Label SetDeadline;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

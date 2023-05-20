@@ -16,5 +16,28 @@ namespace DB_Lab_Project
         {
             InitializeComponent();
         }
+
+        private void CreateBtn_Click(object sender, EventArgs e)
+        {
+            if(comboBox1.SelectedIndex == 0)
+            {
+                CreateAssignment assignmentPortal = new CreateAssignment();
+                assignmentPortal.ShowDialog();
+
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                CreateAnnouncement announce = new CreateAnnouncement();
+                announce.ShowDialog();
+            }
+            else if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Error. No Item Selected!");
+            }
+        }
     }
 }

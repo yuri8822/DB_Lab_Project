@@ -17,25 +17,10 @@ namespace DB_Lab_Project
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void ClassBtn_Click(object sender, EventArgs e)
         {
             CreateClass create = new CreateClass();
             create.Show();
-        }
-
-        private void dashboardClasses1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

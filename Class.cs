@@ -21,5 +21,11 @@ namespace DB_Lab_Project
         {
 
         }
+
+        private void CreateBtn_Click(object sender, EventArgs e)
+        {
+            Create create = new Create();
+            create.ShowDialog();
+        }
     }
 }

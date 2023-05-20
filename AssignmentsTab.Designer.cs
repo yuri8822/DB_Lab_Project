@@ -64,6 +64,7 @@
             this.ViewBtn.TabIndex = 17;
             this.ViewBtn.Text = "View";
             this.ViewBtn.UseVisualStyleBackColor = false;
+            this.ViewBtn.Click += new System.EventHandler(this.ViewBtn_Click);
             // 
             // UpdateBtn
             // 
@@ -76,6 +77,7 @@
             this.UpdateBtn.TabIndex = 18;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // DeleteBtn
             // 

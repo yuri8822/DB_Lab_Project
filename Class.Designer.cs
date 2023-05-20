@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.GoogleClassroom = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ClassLabel = new System.Windows.Forms.Label();
-            this.CreateClassBtn = new System.Windows.Forms.Button();
+            this.materialTab1 = new DB_Lab_Project.MaterialTab();
             this.assignmentsTab1 = new DB_Lab_Project.AssignmentsTab();
             this.announcements_Tab1 = new DB_Lab_Project.Announcements_Tab();
-            this.materialTab1 = new DB_Lab_Project.MaterialTab();
+            this.CreateBtn = new System.Windows.Forms.Button();
+            this.ClassLabel = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.GoogleClassroom = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@
             this.panel1.Controls.Add(this.materialTab1);
             this.panel1.Controls.Add(this.assignmentsTab1);
             this.panel1.Controls.Add(this.announcements_Tab1);
-            this.panel1.Controls.Add(this.CreateClassBtn);
+            this.panel1.Controls.Add(this.CreateBtn);
             this.panel1.Controls.Add(this.ClassLabel);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.GoogleClassroom);
@@ -54,46 +54,12 @@
             this.panel1.Size = new System.Drawing.Size(1069, 742);
             this.panel1.TabIndex = 0;
             // 
-            // GoogleClassroom
+            // materialTab1
             // 
-            this.GoogleClassroom.AutoSize = true;
-            this.GoogleClassroom.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F);
-            this.GoogleClassroom.Location = new System.Drawing.Point(74, 36);
-            this.GoogleClassroom.Name = "GoogleClassroom";
-            this.GoogleClassroom.Size = new System.Drawing.Size(215, 31);
-            this.GoogleClassroom.TabIndex = 12;
-            this.GoogleClassroom.Text = "Google Classroom";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(80, 80);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(897, 2);
-            this.panel2.TabIndex = 14;
-            // 
-            // ClassLabel
-            // 
-            this.ClassLabel.AutoSize = true;
-            this.ClassLabel.BackColor = System.Drawing.Color.White;
-            this.ClassLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClassLabel.Location = new System.Drawing.Point(74, 120);
-            this.ClassLabel.Name = "ClassLabel";
-            this.ClassLabel.Size = new System.Drawing.Size(111, 36);
-            this.ClassLabel.TabIndex = 15;
-            this.ClassLabel.Text = "Classes";
-            // 
-            // CreateClassBtn
-            // 
-            this.CreateClassBtn.BackColor = System.Drawing.Color.Black;
-            this.CreateClassBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateClassBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CreateClassBtn.Location = new System.Drawing.Point(787, 120);
-            this.CreateClassBtn.Name = "CreateClassBtn";
-            this.CreateClassBtn.Size = new System.Drawing.Size(190, 49);
-            this.CreateClassBtn.TabIndex = 0;
-            this.CreateClassBtn.Text = "+ Create a new class";
-            this.CreateClassBtn.UseVisualStyleBackColor = false;
+            this.materialTab1.Location = new System.Drawing.Point(80, 522);
+            this.materialTab1.Name = "materialTab1";
+            this.materialTab1.Size = new System.Drawing.Size(897, 166);
+            this.materialTab1.TabIndex = 18;
             // 
             // assignmentsTab1
             // 
@@ -109,12 +75,47 @@
             this.announcements_Tab1.Size = new System.Drawing.Size(897, 166);
             this.announcements_Tab1.TabIndex = 16;
             // 
-            // materialTab1
+            // CreateBtn
             // 
-            this.materialTab1.Location = new System.Drawing.Point(80, 522);
-            this.materialTab1.Name = "materialTab1";
-            this.materialTab1.Size = new System.Drawing.Size(897, 166);
-            this.materialTab1.TabIndex = 18;
+            this.CreateBtn.BackColor = System.Drawing.Color.Black;
+            this.CreateBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CreateBtn.Location = new System.Drawing.Point(832, 120);
+            this.CreateBtn.Name = "CreateBtn";
+            this.CreateBtn.Size = new System.Drawing.Size(145, 49);
+            this.CreateBtn.TabIndex = 0;
+            this.CreateBtn.Text = "+ Create New";
+            this.CreateBtn.UseVisualStyleBackColor = false;
+            this.CreateBtn.Click += new System.EventHandler(this.CreateBtn_Click);
+            // 
+            // ClassLabel
+            // 
+            this.ClassLabel.AutoSize = true;
+            this.ClassLabel.BackColor = System.Drawing.Color.White;
+            this.ClassLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClassLabel.Location = new System.Drawing.Point(74, 120);
+            this.ClassLabel.Name = "ClassLabel";
+            this.ClassLabel.Size = new System.Drawing.Size(111, 36);
+            this.ClassLabel.TabIndex = 15;
+            this.ClassLabel.Text = "Classes";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(80, 80);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(897, 2);
+            this.panel2.TabIndex = 14;
+            // 
+            // GoogleClassroom
+            // 
+            this.GoogleClassroom.AutoSize = true;
+            this.GoogleClassroom.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F);
+            this.GoogleClassroom.Location = new System.Drawing.Point(74, 36);
+            this.GoogleClassroom.Name = "GoogleClassroom";
+            this.GoogleClassroom.Size = new System.Drawing.Size(215, 31);
+            this.GoogleClassroom.TabIndex = 12;
+            this.GoogleClassroom.Text = "Google Classroom";
             // 
             // TeacherClass
             // 
@@ -138,7 +139,7 @@
         private System.Windows.Forms.Label GoogleClassroom;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label ClassLabel;
-        private System.Windows.Forms.Button CreateClassBtn;
+        private System.Windows.Forms.Button CreateBtn;
         private AssignmentsTab assignmentsTab1;
         private Announcements_Tab announcements_Tab1;
         private MaterialTab materialTab1;

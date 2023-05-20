@@ -46,5 +46,16 @@ namespace DB_Lab_Project
             AssignmentCB.DataSource = assignments;
             conn.Close();
         }
+
+        private void ViewBtn_Click(object sender, EventArgs e)
+        {
+            ViewAnnouncement announcement = new ViewAnnouncement();
+            announcement.Show();
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DB_Lab_Project
 {
-    partial class Create
+    partial class ViewAnnouncement
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CreateBtn = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Select = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Announcement = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GoogleClassroom = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -40,58 +39,44 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.CreateBtn);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.Select);
+            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.Announcement);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.GoogleClassroom);
-            this.panel1.Location = new System.Drawing.Point(-1, -2);
+            this.panel1.Location = new System.Drawing.Point(-1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(829, 366);
+            this.panel1.Size = new System.Drawing.Size(1071, 739);
             this.panel1.TabIndex = 0;
             // 
-            // CreateBtn
+            // richTextBox1
             // 
-            this.CreateBtn.BackColor = System.Drawing.Color.Black;
-            this.CreateBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateBtn.ForeColor = System.Drawing.Color.White;
-            this.CreateBtn.Location = new System.Drawing.Point(480, 280);
-            this.CreateBtn.Name = "CreateBtn";
-            this.CreateBtn.Size = new System.Drawing.Size(130, 38);
-            this.CreateBtn.TabIndex = 12;
-            this.CreateBtn.Text = "Create";
-            this.CreateBtn.UseVisualStyleBackColor = false;
-            this.CreateBtn.Click += new System.EventHandler(this.CreateBtn_Click);
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.richTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.richTextBox1.Location = new System.Drawing.Point(80, 194);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(897, 367);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "";
             // 
-            // comboBox1
+            // Announcement
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Assignment",
-            "Material",
-            "Announcement"});
-            this.comboBox1.Location = new System.Drawing.Point(324, 129);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(286, 28);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // Select
-            // 
-            this.Select.AutoSize = true;
-            this.Select.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.Select.Location = new System.Drawing.Point(206, 129);
-            this.Select.Name = "Select";
-            this.Select.Size = new System.Drawing.Size(83, 31);
-            this.Select.TabIndex = 10;
-            this.Select.Text = "Select";
+            this.Announcement.AutoSize = true;
+            this.Announcement.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Announcement.Location = new System.Drawing.Point(74, 120);
+            this.Announcement.Name = "Announcement";
+            this.Announcement.Size = new System.Drawing.Size(315, 36);
+            this.Announcement.TabIndex = 12;
+            this.Announcement.Text = "Create Announcement";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(80, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(650, 2);
-            this.panel2.TabIndex = 9;
+            this.panel2.Size = new System.Drawing.Size(897, 2);
+            this.panel2.TabIndex = 11;
             // 
             // GoogleClassroom
             // 
@@ -100,18 +85,19 @@
             this.GoogleClassroom.Location = new System.Drawing.Point(74, 36);
             this.GoogleClassroom.Name = "GoogleClassroom";
             this.GoogleClassroom.Size = new System.Drawing.Size(215, 31);
-            this.GoogleClassroom.TabIndex = 4;
+            this.GoogleClassroom.TabIndex = 9;
             this.GoogleClassroom.Text = "Google Classroom";
             // 
-            // Create
+            // ViewAnnouncement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(828, 364);
+            this.ClientSize = new System.Drawing.Size(1070, 740);
             this.Controls.Add(this.panel1);
-            this.Name = "Create";
-            this.Text = "Create";
+            this.Name = "ViewAnnouncement";
+            this.Text = "CreateAnnouncement";
+            this.Load += new System.EventHandler(this.ViewAnnouncement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -121,10 +107,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label GoogleClassroom;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label Select;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button CreateBtn;
+        private System.Windows.Forms.Label GoogleClassroom;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label Announcement;
     }
 }
