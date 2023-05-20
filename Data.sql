@@ -4,7 +4,7 @@ USE DB_L_Project;
 
 -- Creating Tables
 CREATE TABLE USER_R (
-    UserID INT PRIMARY KEY,
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
     Name NVARCHAR(255),
 	Pass NVARCHAR(255),
     Email NVARCHAR(255),
@@ -72,13 +72,13 @@ CREATE TABLE Material (
 
 
 -- Insert into USER_R table
-INSERT INTO USER_R (UserID, Name, Pass, Email, UserType)
+INSERT INTO USER_R (Name, Pass, Email, UserType)
 VALUES
-(1, N'John Doe', N'password1', N'john.doe@example.com', N'Student'),
-(2, N'Jane Smith', N'password2', N'jane.smith@example.com', N'Teacher'),
-(3, N'Michael Johnson', N'password3', N'michael.johnson@example.com', N'Student'),
-(4, N'Sarah Lee', N'password4', N'sarah.lee@example.com', N'Student'),
-(5, N'David Wang', N'password5', N'david.wang@example.com', N'Teacher');
+(N'John Doe', N'password1', N'john.doe@example.com', N'Student'),
+(N'Jane Smith', N'password2', N'jane.smith@example.com', N'Teacher'),
+(N'Michael Johnson', N'password3', N'michael.johnson@example.com', N'Student'),
+(N'Sarah Lee', N'password4', N'sarah.lee@example.com', N'Student'),
+(N'David Wang', N'password5', N'david.wang@example.com', N'Teacher');
 
 -- Insert into CLASS table
 INSERT INTO CLASS (ClassCode, ClassName, ManagedBy)

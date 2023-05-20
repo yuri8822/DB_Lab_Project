@@ -16,5 +16,11 @@ namespace DB_Lab_Project
         {
             InitializeComponent();
         }
+
+        private void Join_Click(object sender, EventArgs e)
+        {
+            // Over here we need to check if the user entered code is present within the "allSemesterClasses"
+            // table in our Database.
+        }
     }
 }
