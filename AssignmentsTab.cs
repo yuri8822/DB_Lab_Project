@@ -32,7 +32,7 @@ namespace DB_Lab_Project
             
             List<Assignment> assignments = new List<Assignment>();
             AssignmentCB.Items.Clear();
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(db.getUmarString());
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Assignment", conn);
             SqlDataReader reader = cmd.ExecuteReader();

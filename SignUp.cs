@@ -22,7 +22,7 @@ namespace DB_Lab_Project
             InitializeComponent();
             db = new Database();
 
-            conn = new SqlConnection(db.getARString());
+            conn = new SqlConnection(db.getUmarString());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

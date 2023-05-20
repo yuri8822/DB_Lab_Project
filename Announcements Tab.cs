@@ -32,7 +32,7 @@ namespace DB_Lab_Project
         {
             List<Announcement> announcements = new List<Announcement>();
             AnnouncementCB.Items.Clear();
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(db.getUmarString());
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Announcement", conn);
             SqlDataReader reader = cmd.ExecuteReader();

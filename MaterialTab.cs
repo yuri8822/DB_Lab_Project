@@ -31,7 +31,7 @@ namespace DB_Lab_Project
         private void MaterialLoad(object sender, EventArgs e)
         {
             List<Material> material = new List<Material>();
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(db.getUmarString());
             SqlCommand cmd = new SqlCommand("SELECT * FROM Material", conn);
             conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
