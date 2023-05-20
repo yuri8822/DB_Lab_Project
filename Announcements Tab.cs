@@ -32,8 +32,8 @@ namespace DB_Lab_Project
         private void Announcement_Tab_Load(object sender, EventArgs e)
         {
             List<Announcement> announcements = new List<Announcement>();
-            //AnnouncementCB.Items.Clear();
-            SqlConnection conn = new SqlConnection(db.getARString());
+            AnnouncementCB.Items.Clear();
+            SqlConnection conn = new SqlConnection(db.getUmarString());
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Announcement", conn);
             SqlDataReader reader = cmd.ExecuteReader();
