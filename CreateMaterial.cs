@@ -18,13 +18,13 @@ namespace DB_Lab_Project
             InitializeComponent();
         }
 
-        public String ClassesCBText { get; set; }
+        public int classCode { get; set; }
 
         private void PostBtn_Click(object sender, EventArgs e)
         {
             string title = TitleTextBox.Text;
             string desc = richTextBox1.Text;
-            string course = ClassesCBText;
+            int course = classCode;
             Random randomNumber = new Random();
             int materialID = randomNumber.Next(0, 1001);
             SqlConnection conn = new SqlConnection(Database.getConnection());

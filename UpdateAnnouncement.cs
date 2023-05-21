@@ -42,10 +42,25 @@ namespace DB_Lab_Project
         {
             String title = TitleTextBox.Text;
             String description = richTextBox1.Text;
+            string selectedText = AnnouncementCBText;
+            int classroomCode = 0;
             SqlConnection conn = new SqlConnection(Database.getConnection());
-            SqlCommand cmd = new SqlCommand("UPDATE Announcement SET announce_Title = @title, announce_Desc = @description WHERE announce_Title = @selectedText", conn);
+            SqlCommand cmd1 = new SqlCommand("SELECT ClassCode FROM Class WHERE ClassName = @selectedText", conn);
+            conn.Open();
+            cmd1.Parameters.AddWithValue("@selectedText", selectedText);
+            SqlDataReader reader = cmd1.ExecuteReader();
+            if (reader.Read())
+            {
+                classroomCode = Convert.ToInt32(reader["ClassCode"]);
+                
+            }
+            //MessageBox.Show(classroomCode.ToString());
+            reader.Close();
+            conn.Close();
+            SqlCommand cmd = new SqlCommand("UPDATE Announcement SET announce_Title = @title, announce_Desc = @description, ClassCode = @classroomCode WHERE CLassCode = @classroomCode", conn);
             cmd.Parameters.AddWithValue("@title", title);
             cmd.Parameters.AddWithValue("@description", description);
+            cmd.Parameters.AddWithValue("@classroomCode", classroomCode);
             cmd.Parameters.AddWithValue("@selectedText", AnnouncementCBText);
             conn.Open();
             cmd.ExecuteNonQuery();

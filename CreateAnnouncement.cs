@@ -18,7 +18,7 @@ namespace DB_Lab_Project
             InitializeComponent();
         }
 
-        public string ClassesCBText { get; set; }
+        public int classCode { get; set; }
         
         private void PostBtn_Click(object sender, EventArgs e)
         {
@@ -27,7 +27,7 @@ namespace DB_Lab_Project
             string title = TitleTextBox.Text;
             string description = richTextBox1.Text;
             string date = DateTime.Now.ToString("MM/dd/yyyy");
-            string course = ClassesCBText;
+            int course = classCode;
             SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("INSERT INTO Announcement (announce_ID, announce_Title, announce_Desc, announce_Time, ClassCode) VALUES (@randomNumber,@title, @description, @date, @course)", conn);
             cmd.Parameters.AddWithValue("@randomNumber", randomNumber);

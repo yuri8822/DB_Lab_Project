@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DB_Lab_Project
 {
-    public partial class CreateClass : Form
+    public partial class StudentClasses : UserControl
     {
-        public CreateClass()
+        public StudentClasses()
         {
             InitializeComponent();
         }

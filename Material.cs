@@ -12,13 +12,21 @@ namespace DB_Lab_Project
         public string materialTitle;
         public string materialDescription;
         public string materialTime;
+        public int classCode;
 
-        public Material(int materialID, string materialTitle, string materialDescription, string materialTime)
+        public Material(int materialID, string materialTitle, string materialDescription, string materialTime, int classCode)
         {
             this.materialID = materialID;
             this.materialTitle = materialTitle;
             this.materialDescription = materialDescription;
             this.materialTime = materialTime;
+            this.classCode = classCode;
+        }
+        
+        public Material(string materialTitle, string materialDescription)
+        {
+            this.materialTitle = materialTitle;
+            this.materialDescription = materialDescription;
         }
 
         public int MaterialID

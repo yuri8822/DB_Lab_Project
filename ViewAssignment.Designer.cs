@@ -34,12 +34,14 @@
             this.ViewAssignmentLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GoogleClassroom = new System.Windows.Forms.Label();
+            this.SetDeadline = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.SetDeadline);
             this.panel1.Controls.Add(this.Marks);
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.ViewAssignmentLabel);
@@ -100,6 +102,17 @@
             this.GoogleClassroom.TabIndex = 11;
             this.GoogleClassroom.Text = "Google Classroom";
             // 
+            // SetDeadline
+            // 
+            this.SetDeadline.AutoSize = true;
+            this.SetDeadline.BackColor = System.Drawing.Color.White;
+            this.SetDeadline.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SetDeadline.Location = new System.Drawing.Point(631, 155);
+            this.SetDeadline.Name = "SetDeadline";
+            this.SetDeadline.Size = new System.Drawing.Size(100, 27);
+            this.SetDeadline.TabIndex = 23;
+            this.SetDeadline.Text = "Deadline:";
+            // 
             // ViewAssignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -123,5 +136,6 @@
         private System.Windows.Forms.Label ViewAssignmentLabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label Marks;
+        private System.Windows.Forms.Label SetDeadline;
     }
 }

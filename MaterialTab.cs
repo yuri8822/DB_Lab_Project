@@ -35,7 +35,7 @@ namespace DB_Lab_Project
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                material.Add(new Material(Convert.ToInt32(reader["MT_ID"]),reader["MT_Title"].ToString(), reader["MT_Desc"].ToString(), reader["MT_Time"].ToString()));
+               // material.Add(new Material(Convert.ToInt32(reader["MT_ID"]),reader["MT_Title"].ToString(), reader["MT_Desc"].ToString(), reader["MT_Time"].ToString()));
             }
             MaterialCB.DisplayMember = "MT_Title";
             MaterialCB.DataSource = material;

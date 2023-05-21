@@ -53,6 +53,7 @@ namespace DB_Lab_Project
             int marks = int.Parse(MarksTxtBox.Text);
             DateTime dt = dateTimePicker1.Value;
             SqlConnection conn = new SqlConnection(Database.getConnection());
+            conn.Close();
             SqlCommand cmd = new SqlCommand("UPDATE Assignment SET ass_Title = @title, ass_Desc = @desc, ass_Time = @dt, ass_Marks = @marks WHERE ass_Title = @selectedText", conn);
             cmd.Parameters.AddWithValue("@title", title);
             cmd.Parameters.AddWithValue("@desc", desc);

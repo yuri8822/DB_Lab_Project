@@ -34,12 +34,14 @@
             this.Select = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GoogleClassroom = new System.Windows.Forms.Label();
+            this.Code = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.Code);
             this.panel1.Controls.Add(this.CreateBtn);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.Select);
@@ -103,6 +105,16 @@
             this.GoogleClassroom.TabIndex = 4;
             this.GoogleClassroom.Text = "Google Classroom";
             // 
+            // Code
+            // 
+            this.Code.AutoSize = true;
+            this.Code.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.Code.Location = new System.Drawing.Point(74, 212);
+            this.Code.Name = "Code";
+            this.Code.Size = new System.Drawing.Size(131, 31);
+            this.Code.TabIndex = 13;
+            this.Code.Text = "ClassCode";
+            // 
             // Create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -112,6 +124,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Create";
             this.Text = "Create";
+            this.Load += new System.EventHandler(this.Create_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -126,5 +139,6 @@
         private System.Windows.Forms.Label Select;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button CreateBtn;
+        private System.Windows.Forms.Label Code;
     }
 }

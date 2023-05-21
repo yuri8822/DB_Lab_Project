@@ -22,7 +22,8 @@ namespace DB_Lab_Project
 
         private void ViewAnnouncement_Load(object sender, EventArgs e)
         {
-            
+
+
             string selectedText = AnnouncementCBText;
             Announcement.Text = selectedText;
             SqlConnection conn = new SqlConnection(Database.getConnection());

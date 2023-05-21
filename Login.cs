@@ -35,7 +35,12 @@ namespace DB_Lab_Project
             reader.Read();
             if (reader.HasRows)
             {
+                //MessageBox.Show(TeacherEmail.Text);
                 Dashboard dashboard = new Dashboard();
+                //DashboardClasses dashboardClasses = new DashboardClasses();
+                //dashboardClasses.email = TeacherEmail.Text;
+                dashboard.email = TeacherEmail.Text;
+                //dashboard.SetDashboardClasses(dashboardClasses); // Pass the object to the Dashboard form
                 dashboard.Show();
             }
             reader.Close();
@@ -49,11 +54,11 @@ namespace DB_Lab_Project
             cmd.Parameters.AddWithValue("@Email", StudentEmail.Text);
             cmd.Parameters.AddWithValue("@Pass", StudentPassword.Text);
             reader = cmd.ExecuteReader();
-
             reader.Read();
             if (reader.HasRows)
             {
                 StudentDashboard stdDashboard = new StudentDashboard();
+                stdDashboard.email = StudentEmail.Text;
                 stdDashboard.Show();
             }
             reader.Close();

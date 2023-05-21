@@ -84,13 +84,19 @@
     <Compile Include="CreateAnnouncement.Designer.cs">
       <DependentUpon>CreateAnnouncement.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashboardClasses.cs">
+    <Compile Include="Database.cs" />
+    <Compile Include="StudentClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentClass.Designer.cs">
+      <DependentUpon>StudentClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentClasses.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DashboardClasses.Designer.cs">
-      <DependentUpon>DashboardClasses.cs</DependentUpon>
+    <Compile Include="StudentClasses.Designer.cs">
+      <DependentUpon>StudentClasses.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs" />
     <Compile Include="UpdateAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +121,11 @@
     <Compile Include="ViewAnnouncement.Designer.cs">
       <DependentUpon>ViewAnnouncement.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateClass.cs">
+    <Compile Include="UpdateClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateClass.Designer.cs">
-      <DependentUpon>CreateClass.cs</DependentUpon>
+    <Compile Include="UpdateClass.Designer.cs">
+      <DependentUpon>UpdateClass.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateMaterial.cs">
       <SubType>Form</SubType>
@@ -171,7 +177,7 @@
     <Compile Include="StudentDashboard.Designer.cs">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherDashboardClasses.cs" />
+    <Compile Include="DashboardClasses.cs" />
     <Compile Include="ViewAssignment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,12 @@
     <EmbeddedResource Include="CreateAnnouncement.resx">
       <DependentUpon>CreateAnnouncement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentClass.resx">
+      <DependentUpon>StudentClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentClasses.resx">
+      <DependentUpon>StudentClasses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateAnnouncement.resx">
       <DependentUpon>UpdateAnnouncement.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,17 +226,14 @@
     <EmbeddedResource Include="ViewAnnouncement.resx">
       <DependentUpon>ViewAnnouncement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateClass.resx">
-      <DependentUpon>CreateClass.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateClass.resx">
+      <DependentUpon>UpdateClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateMaterial.resx">
       <DependentUpon>CreateMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DashboardClasses.resx">
-      <DependentUpon>DashboardClasses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JoinClass.resx">
       <DependentUpon>JoinClass.cs</DependentUpon>
