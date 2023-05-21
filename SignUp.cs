@@ -35,11 +35,14 @@ namespace DB_Lab_Project
 
         private void Sign_Up_Click(object sender, EventArgs e)
         {
+            Random randomNumber = new Random();
+            int random = randomNumber.Next(0, 9999);
             conn.Open();
-            cmd = new SqlCommand("INSERT INTO USER_R (Name, Email, UserType, Pass) VALUES (@Name, @Email, @UserType, @Password)", conn);
+            cmd = new SqlCommand("INSERT INTO USER_R (UserID, Name, Email, UserType, Pass) VALUES (@random, @Name, @Email, @UserType, @Password)", conn);
             cmd.Parameters.AddWithValue("@Name", FName.Text + " " + LName.Text);
             cmd.Parameters.AddWithValue("@Email", EmailTxt.Text);
             cmd.Parameters.AddWithValue("@Password", PasswordTxt.Text);
+            cmd.Parameters.AddWithValue("@random", random);
             if (Student.Checked == true)
             {
                 cmd.Parameters.AddWithValue("@UserType", "Student");
