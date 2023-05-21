@@ -13,7 +13,6 @@ namespace DB_Lab_Project
 {
     public partial class Login : Form
     {
-        private Database db;
         private SqlConnection conn;
         private SqlCommand cmd;
         private SqlDataReader reader;
@@ -22,9 +21,7 @@ namespace DB_Lab_Project
         {
             InitializeComponent();
 
-            db = new Database();
-
-            conn = new SqlConnection(db.getUmarString());
+            conn = new SqlConnection(Database.getConnection());
         }
 
         private void TeacherLogin_Click(object sender, EventArgs e)

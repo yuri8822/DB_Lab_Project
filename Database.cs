@@ -9,7 +9,7 @@ namespace DB_Lab_Project
 {
     public static class Database
     {
-        public static bool choose = true;
+        public static bool choose = false;
 
         public static string getConnection()
         {

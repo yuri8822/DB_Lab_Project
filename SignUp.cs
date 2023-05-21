@@ -13,16 +13,14 @@ namespace DB_Lab_Project
 {
     public partial class SignUp : Form
     {
-        private Database db;
         private SqlConnection conn;
         private SqlCommand cmd;
         private SqlDataReader reader;
         public SignUp()
         {
             InitializeComponent();
-            db = new Database();
 
-            conn = new SqlConnection(db.getUmarString());
+            conn = new SqlConnection(Database.getConnection());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
