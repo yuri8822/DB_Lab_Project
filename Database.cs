@@ -7,15 +7,22 @@ using System.Data.SqlClient;
 
 namespace DB_Lab_Project
 {
-    public class Database
+    public static class Database
     {
-        public string getUmarString()
-        {            
-            return @"Data Source = UMARFAROOQ\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
-        }
-        public string getARString()
+        public static bool choose = true;
+
+        public static string getConnection()
         {
-            return @"Data Source = DESKTOP-L3PILNC\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
+            if (choose)
+            {
+                return @"Data Source = UMARFAROOQ\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
+
+            }
+            else
+            {
+                return @"Data Source = DESKTOP-L3PILNC\SQLEXPRESS; Initial Catalog = DB_L_Project; Integrated Security = True";
+            }
+
         }
     }
 }

@@ -13,12 +13,9 @@ namespace DB_Lab_Project
 {
     public partial class UpdateAnnouncement : Form
     {
-        private Database db;
         public UpdateAnnouncement()
         {
-            InitializeComponent();
-            db = new Database();
-                
+            InitializeComponent();                
         }
 
         public string AnnouncementCBText { get; set; }
@@ -27,7 +24,7 @@ namespace DB_Lab_Project
         {
             string selectedText = AnnouncementCBText;
             TitleTextBox.Text = selectedText;
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("Select * FROM Announcement WHERE announce_Title = @selectedText", conn);
             cmd.Parameters.AddWithValue("@selectedText", selectedText);
             conn.Open();
@@ -45,7 +42,7 @@ namespace DB_Lab_Project
         {
             String title = TitleTextBox.Text;
             String description = richTextBox1.Text;
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("UPDATE Announcement SET announce_Title = @title, announce_Desc = @description WHERE announce_Title = @selectedText", conn);
             cmd.Parameters.AddWithValue("@title", title);
             cmd.Parameters.AddWithValue("@description", description);

@@ -13,11 +13,9 @@ namespace DB_Lab_Project
 {
     public partial class CreateAnnouncement : Form
     {
-        private Database db;
         public CreateAnnouncement()
         {
             InitializeComponent();
-            db = new Database();
         }
 
         public string ClassesCBText { get; set; }
@@ -30,7 +28,7 @@ namespace DB_Lab_Project
             string description = richTextBox1.Text;
             string date = DateTime.Now.ToString("MM/dd/yyyy");
             string course = ClassesCBText;
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("INSERT INTO Announcement (announce_ID, announce_Title, announce_Desc, announce_Time, ClassCode) VALUES (@randomNumber,@title, @description, @date, @course)", conn);
             cmd.Parameters.AddWithValue("@randomNumber", randomNumber);
             cmd.Parameters.AddWithValue("@title", title);

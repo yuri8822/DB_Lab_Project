@@ -13,7 +13,6 @@ namespace DB_Lab_Project
 {
     public partial class AssignmentsTab : UserControl
     {
-        Database db = new Database();
         public AssignmentsTab()
         {
             InitializeComponent();
@@ -32,7 +31,7 @@ namespace DB_Lab_Project
             
             List<Assignment> assignments = new List<Assignment>();
             //AssignmentCB.Items.Clear();
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Assignment", conn);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -63,7 +62,7 @@ namespace DB_Lab_Project
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             conn.Open();
             SqlCommand cmd = new SqlCommand("DELETE FROM Assignment WHERE ass_Title = @title", conn);
             cmd.Parameters.AddWithValue("@title", AssignmentCB.Text);

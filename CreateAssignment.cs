@@ -13,11 +13,9 @@ namespace DB_Lab_Project
 {
     public partial class CreateAssignment : Form
     {
-        private Database db;
         public CreateAssignment()
         {
             InitializeComponent();
-            db = new Database();
         }
 
         public string ClassesCBText { get; set; }
@@ -31,7 +29,7 @@ namespace DB_Lab_Project
             int marks = int.Parse(MarksTxtBox.Text);
             Random randomNumber = new Random();
             int assignmentID = randomNumber.Next(0, 1001);
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("INSERT INTO Assignment (ass_ID,ass_Title, ass_Desc, ass_Time, ass_Marks, ass_Course) VALUES (@assignmentID,@title, @description, @dueDate, @marks, @course)", conn);
             cmd.Parameters.AddWithValue("@assignmentID", assignmentID);
             cmd.Parameters.AddWithValue("@title", title);

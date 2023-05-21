@@ -13,11 +13,9 @@ namespace DB_Lab_Project
 {
     public partial class ViewAssignment : Form
     {
-        private Database db;
         public ViewAssignment()
         {
             InitializeComponent();
-            db = new Database();
         }
         
         public string AssignmentCBText { get; set; }
@@ -26,7 +24,7 @@ namespace DB_Lab_Project
         {
             string title = AssignmentCBText;
             ViewAssignmentLabel.Text = title;
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("SELECT * FROM Assignment WHERE ass_Title = @title", conn);
             cmd.Parameters.AddWithValue("@title", AssignmentCBText);
             conn.Open();

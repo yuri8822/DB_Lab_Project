@@ -13,11 +13,9 @@ namespace DB_Lab_Project
 {    
     public partial class CreateMaterial : Form
     {
-        private Database db;
         public CreateMaterial()
         {
             InitializeComponent();
-            db = new Database();
         }
 
         public String ClassesCBText { get; set; }
@@ -29,7 +27,7 @@ namespace DB_Lab_Project
             string course = ClassesCBText;
             Random randomNumber = new Random();
             int materialID = randomNumber.Next(0, 1001);
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("INSERT INTO Material (MT_ID ,MT_Title, MT_Desc, ClassCode) VALUES (@materialID ,@title, @description, @course)", conn);
             cmd.Parameters.AddWithValue("@materialID ", materialID);
             cmd.Parameters.AddWithValue("@title", title);

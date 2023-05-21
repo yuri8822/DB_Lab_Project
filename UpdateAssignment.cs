@@ -13,11 +13,9 @@ namespace DB_Lab_Project
 {
     public partial class UpdateAssignment : Form
     {
-        private Database db;
         public UpdateAssignment()
         {
             InitializeComponent();
-            db = new Database();
         }
 
         public string AssignmentCBText { get; set; }
@@ -25,7 +23,7 @@ namespace DB_Lab_Project
         private void UpdateAssignment_Load(object sender, EventArgs e)
         {
             string selectedText = AssignmentCBText;
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("Select * FROM Assignment WHERE ass_Title = @selectedText", conn);
             cmd.Parameters.AddWithValue("@selectedText", selectedText);
             conn.Open();
@@ -54,7 +52,7 @@ namespace DB_Lab_Project
             string desc = richTextBox1.Text;
             int marks = int.Parse(MarksTxtBox.Text);
             DateTime dt = dateTimePicker1.Value;
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("UPDATE Assignment SET ass_Title = @title, ass_Desc = @desc, ass_Time = @dt, ass_Marks = @marks WHERE ass_Title = @selectedText", conn);
             cmd.Parameters.AddWithValue("@title", title);
             cmd.Parameters.AddWithValue("@desc", desc);

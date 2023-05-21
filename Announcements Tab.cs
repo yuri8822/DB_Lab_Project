@@ -13,7 +13,6 @@ namespace DB_Lab_Project
 {
     public partial class Announcements_Tab : UserControl
     {
-        Database db = new Database();
         public Announcements_Tab()
         {
             InitializeComponent();
@@ -33,7 +32,7 @@ namespace DB_Lab_Project
         {
             List<Announcement> announcements = new List<Announcement>();
             //AnnouncementCB.Items.Clear();
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Announcement", conn);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -65,7 +64,7 @@ namespace DB_Lab_Project
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             conn.Open();
             SqlCommand cmd = new SqlCommand("DELETE FROM Announcement WHERE announce_Title = @title", conn);
             cmd.Parameters.AddWithValue("@title", AnnouncementCB.Text);

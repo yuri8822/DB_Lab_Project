@@ -14,12 +14,10 @@ namespace DB_Lab_Project
 {
     public partial class DashboardClasses : UserControl
     {
-        private Database db;
 
         public DashboardClasses()
         {
             InitializeComponent();
-            db = new Database();
             CreateAssignment assignment = new CreateAssignment();
             assignment.ClassesCBText = ClassesCB.Text;
         }
@@ -31,13 +29,11 @@ namespace DB_Lab_Project
                 { return (TeacherDashboardClasses)ClassesCB.SelectedItem; }
             }
         }
-
-        // READ THIS: I have removed the getConnection function and have instead changed the code to fit the new method of getting the string
         
         private void DashboardClasses_Load(object sender, EventArgs e)
         {
             List<TeacherDashboardClasses> teacherDashboardClasses = new List<TeacherDashboardClasses>();
-            SqlConnection conn = new SqlConnection(db.getARString()); // ITS OVER HERE! remember to define your string in the Database.cs class!
+            SqlConnection conn = new SqlConnection(Database.getConnection()); 
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM CLASS", conn);
             SqlDataReader reader = cmd.ExecuteReader();

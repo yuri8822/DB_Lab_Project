@@ -13,11 +13,9 @@ namespace DB_Lab_Project
 {
     public partial class MaterialTab : UserControl
     {
-        private Database db;
         public MaterialTab()
         {
             InitializeComponent();
-            db = new Database();
         }
 
         public Material Material
@@ -31,7 +29,7 @@ namespace DB_Lab_Project
         private void MaterialLoad(object sender, EventArgs e)
         {
             List<Material> material = new List<Material>();
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("SELECT * FROM Material", conn);
             conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -60,7 +58,7 @@ namespace DB_Lab_Project
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             conn.Open();
             SqlCommand cmd = new SqlCommand("DELETE FROM Material WHERE MT_Title = @title", conn);
             cmd.Parameters.AddWithValue("@title", MaterialCB.Text);

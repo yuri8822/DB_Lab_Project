@@ -13,11 +13,9 @@ namespace DB_Lab_Project
 {
     public partial class UpdateMaterial : Form
     {
-        private Database db;
         public UpdateMaterial()
         {
             InitializeComponent();
-            db = new Database();
         }
 
         public string MaterialCBText { get; set; }
@@ -26,7 +24,7 @@ namespace DB_Lab_Project
         {
             string selectedText = MaterialCBText;
             TitleTextBox.Text = selectedText;
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("Select * FROM Material WHERE MT_Title = @selectedText", conn);
             cmd.Parameters.AddWithValue("@selectedText", selectedText);
             conn.Open();
@@ -43,7 +41,7 @@ namespace DB_Lab_Project
         {
             string title = TitleTextBox.Text;
             string description = richTextBox1.Text;
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("UPDATE Material SET MT_Title = @title, MT_Desc = @description WHERE MT_Title = @selectedText", conn);
             cmd.Parameters.AddWithValue("@title", title);
             cmd.Parameters.AddWithValue("@description", description);

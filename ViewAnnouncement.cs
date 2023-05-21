@@ -13,11 +13,9 @@ namespace DB_Lab_Project
 {
     public partial class ViewAnnouncement : Form
     {
-        private Database db;
         public ViewAnnouncement()
         {
             InitializeComponent();
-            db = new Database();
         }
 
         public string AnnouncementCBText { get; set; }
@@ -27,7 +25,7 @@ namespace DB_Lab_Project
             
             string selectedText = AnnouncementCBText;
             Announcement.Text = selectedText;
-            SqlConnection conn = new SqlConnection(db.getARString());
+            SqlConnection conn = new SqlConnection(Database.getConnection());
             SqlCommand cmd = new SqlCommand("Select * FROM Announcement WHERE announce_Title = @selectedText", conn);
             cmd.Parameters.AddWithValue("@selectedText", selectedText);
             conn.Open();
